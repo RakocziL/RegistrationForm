@@ -68,9 +68,14 @@ body{
                 padding-bottom: 5px;
                 padding-left: 5px;
                 outline:none;
+                transition-duration:0.4sec;
+                -webkit-transition-duration: 0.4s;
             }
                 input:focus{
                     border-color:#619874;
+                }
+                input:hover{
+                    border-color: aliceblue;
                 }
             fieldset{
                 padding-left: 50px;
@@ -81,18 +86,48 @@ body{
                 display:flex;
             }
         .submitButton{
+            color:aliceblue;
+            border: 2px solid black;
             margin: 30px;
-            min-height: 40px;
-            min-width: 120px;
             max-width: 220px;
-            background:none;
-            border:1px solid rgb(83, 82, 82);
-            border-radius: 20px;
+            position: relative;
+            background-color:#619874;
+            border-radius: 1em;
+            font-size: 16px;
+            padding: 0.8em 1.8em;
+            cursor:pointer;
+            user-select:none;
+            text-align: center;
+            text-decoration: none;
+            transition-duration: 0.4s;
+            -webkit-transition-duration: 0.4s;
         }
             .submitButton:hover{
                 background-color: aliceblue;
+                color:#2B3B4E;
             }
             .submitButton:active{
                 background-color: #619874;
-                transform:scale(1.2);
+                top:2px;
             }
+            .submitButton:active:after {
+                box-shadow: 0 0 0 0 #2B3B4E;
+                position: absolute;
+                left: 0;
+                top:0;
+                opacity: 1;
+                transition: 0s;
+              }
+            .submitButton:after {
+                content: "";
+                display: block;
+                position: absolute;
+                border-radius: 1em;
+                left: 0;
+                top:0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all 0.5s;
+                box-shadow: 0 0 10px 15px #2B3B4E;
+              }
