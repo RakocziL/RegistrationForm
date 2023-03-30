@@ -148,3 +148,17 @@ body{
             .logIn span:hover{
                 cursor:pointer;
             }
+        .footer{
+            position: fixed;
+            bottom:0;
+            font-size:18px;
+            color:gray;
+            height:36px;
+            width: 60%;
+            padding-top:16px;
+            text-align: center;
+        }
+            .footer a{
+                text-decoration: none;
+                color:gray;
+            }
