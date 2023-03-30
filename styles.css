@@ -25,6 +25,8 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        
     }   
         .regPic{
             width: 100%;
@@ -38,6 +40,7 @@ body{
         font-size: var(--font-size);
         display:flex;
         flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 40px 70px;
        
     }
         .formBox h1{
@@ -89,6 +92,7 @@ body{
             color:aliceblue;
             border: 2px solid black;
             margin: 30px;
+            margin-bottom: 14px;
             max-width: 220px;
             position: relative;
             background-color:#619874;
@@ -130,4 +134,17 @@ body{
                 opacity: 0;
                 transition: all 0.5s;
                 box-shadow: 0 0 10px 15px #2B3B4E;
-              }
+            }
+        .logIn{
+            margin-top: 0px;
+            margin-left: 12px;
+            font-size: 11pt;
+            flex:0;
+        }
+            .logIn span{
+                color:#619874;
+                font-style: bold;
+            }
+            .logIn span:hover{
+                cursor:pointer;
+            }
