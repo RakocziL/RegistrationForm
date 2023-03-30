@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="content">
-       <div class="info">
+       <div class="info slideUp-animation">
             <h1>Create your Account</h1>
             <img src="pics/gamer-video-game-svgrepo-com.svg" class="regPic">
         </div>
-        <div class="formBox">
+        <div class="formBox slideRight-animation">
             <!--Logo-->
             <h1>Pannon<sup>™</sup></h1>
             <!--IntroText-->
@@ -28,28 +28,28 @@
                 <!--Name-->
                 <fieldset>
                     <!--First Name-->
-                    <input type="text" id="first_name" name="first_name" placeholder="First Name">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
                     <!--Last Name-->
-                    <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
                 </fieldset>
                 <!--Contact-->
                 <fieldset>
                     <!--Email-->
-                    <input type="email" id="user_email" name="email" placeholder="you@example.com">
+                    <input type="email" id="user_email" name="email" placeholder="you@example.com" required>
                     <!--Phone Number-->
-                    <input type="tel" id="phone" name="phone" placeholder="06301234321">
+                    <input type="tel" id="phone" name="phone" placeholder="06301234321" required>
                 </fieldset>
                 <!--Password-->
                 <fieldset>
                     <!--Password First-->
-                    <input type="password" id="password" name="password" placeholder="********">
+                    <input type="password" id="password" name="password" placeholder="********" min="8" max="16" required>
                     <!--Password Again-->
-                    <input type="password" id="passwordAgain" name="passwordAgain" placeholder="********">
+                    <input type="password" id="passwordAgain" name="passwordAgain" placeholder="********" min="8" max="16" required>
                 </fieldset>
             </form>
 
             <!--Submit Button-->
-           <button class="submitButton">Create Account</button>
+           <button type="submit" class="submitButton">Create Account</button>
 
            <!--LogIn-->
            <p class="logIn">Already have an account? <span>Log In</span></p>
