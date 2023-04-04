@@ -74,11 +74,12 @@ body{
             display:flex;
             flex-direction: column;
             justify-content:center;
-            gap: 18px;
+            gap: 0px;
 
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
             input{
+                margin: 0;
                 color: rgb(83, 82, 82);
                 font-size: 11pt;
                 background:none;
@@ -112,6 +113,17 @@ body{
                 border-style: none;
                 display:flex;
             }
+                fieldset div{
+                    margin: 0;
+                }
+                fieldset p{
+                    height:11pt;
+                    margin:0;
+                    font-size: 11pt;
+                    position: relative;
+                    top: px;
+                    color: rgb(214, 35, 35);
+                }
         .submitButton{
             color:aliceblue;
             border: 2px solid black;

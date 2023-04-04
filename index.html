@@ -29,23 +29,41 @@
                 <!--Name-->
                 <fieldset>
                     <!--First Name-->
-                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                    <div class="inputBox">
+                        <input type="text" id="first_name" class="inputs" name="first_name" placeholder="First Name">
+                        <p class="error"></p>
+                    </div>
                     <!--Last Name-->
-                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                    <div class="inputBox">
+                        <input type="text" id="last_name" class="inputs" name="last_name" placeholder="Last Name">
+                        <p class="error"></p>
+                    </div>
                 </fieldset>
                 <!--Contact-->
                 <fieldset>
                     <!--Email-->
-                    <input type="email" id="user_email" name="email" placeholder="you@example.com" required>
+                    <div class="inputBox">
+                        <input type="email" id="user_email" class="inputs" name="email" placeholder="you@example.com">
+                        <p class="error"></p>
+                    </div>
                     <!--Phone Number-->
-                    <input type="tel" id="phone" name="phone" placeholder="06301234321" required>
+                    <div class="inputBox">
+                        <input type="tel" id="phone" class="inputs" name="phone" placeholder="06301234321">
+                        <p class="error"></p>
+                    </div>
                 </fieldset>
                 <!--Password-->
                 <fieldset>
                     <!--Password First-->
-                    <input type="password" id="password" name="password" placeholder="********" min="8" max="16" required>
+                    <div class="inputBox">
+                        <input type="password" id="password" class="inputs" name="password" placeholder="********" min="8" max="16">
+                        <p class="error"></p>
+                    </div>
                     <!--Password Again-->
-                    <input type="password" id="passwordAgain" name="passwordAgain" placeholder="********" min="8" max="16" required>
+                    <div class="inputBox">
+                        <input type="password" id="passwordAgain" class="inputs" name="passwordAgain" placeholder="********" min="8" max="16">
+                        <p class="error"></p>
+                    </div>
                 </fieldset>
             </form>
 
