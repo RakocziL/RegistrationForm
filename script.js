@@ -6,14 +6,10 @@ const   submitButton = document.querySelector(".submitButton"),
         email = document.querySelector("#user_email"),
         phone = document.querySelector("#phone"),
         errorBoxes = document.querySelectorAll(".error"),
-        inputs = document.querySelectorAll(".inputs")
+        inputs = document.querySelectorAll(".inputs"),
+        formBox = document.querySelector(".formBox"),
+        outro = document.querySelector(".account_created")
 
-/* Test */
-inputs.forEach(input => {
-    input.addEventListener("keyup", (e) => {
-        console.log("Say My name!");
-    } );
-});
 
 /* Adding event listeners */
 password.addEventListener("change", validatePassword);
@@ -30,8 +26,17 @@ submitButton.addEventListener("click", (e) => {
         }
         i++;
     });
-})
-
+    i = 0;
+    errorBoxes.forEach(error => {
+        if(error.innerHTML==""){
+            i++;
+        }
+    });
+    if(i=6){
+        formBox.style.display="none";
+        outro.classList.remove("disabled");
+    }
+});
 
 /* To only be able to type letters */
 function alphaOnly(event) {

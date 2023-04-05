@@ -51,6 +51,24 @@ body{
             position: relative;
             top: px;
         }
+    .account_created{
+        width:60%;
+        height: 100vh;
+        background-color: #90DFAA;
+        font-size: var(--font-size);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 40px 70px;
+        
+    }
+        .disabled{
+            display:none;
+        }
+        .account_created h1{
+
+        }
+        
     .formBox{
         width:60%;
         height: 100vh;
