@@ -9,15 +9,25 @@ const   submitButton = document.querySelector(".submitButton"),
         inputs = document.querySelectorAll(".inputs")
 
 
+inputs.forEach(input => {
+    input.addEventListener("keyup", (e) => {
+        console.log("Say My name!");
+    } );
+})
+
 
 submitButton.addEventListener("click", (e) => {
-    errorBoxes.forEach(error =>{
-        error.innerHTML="* fill this";
-    });
+    var i = 0;
     inputs.forEach(input =>{
         input.required = true;
-    })
-
+        if(input.checkValidity() == false){
+            errorBoxes[i].innerHTML="<sub>*<sub>Fill this correctly";
+        }
+        if(input.checkValidity() == true){
+            errorBoxes[i].innerHTML="";
+        }
+        i++;
+    });
 })
 
 
