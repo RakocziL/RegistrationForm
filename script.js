@@ -13,7 +13,14 @@ inputs.forEach(input => {
     input.addEventListener("keyup", (e) => {
         console.log("Say My name!");
     } );
-})
+});
+
+
+first_name.addEventListener("keypress", (e)=>{
+    var key = e.keyCode;
+    return ((key >= 65 && key <= 90) || key == 8);
+});
+
 
 
 submitButton.addEventListener("click", (e) => {
@@ -30,4 +37,10 @@ submitButton.addEventListener("click", (e) => {
     });
 })
 
+
+/* To only be able to type letters */
+function alphaOnly(event) {
+    var key = event.keyCode;
+    return ((key >= 65 && key <= 90) || key == 8);
+  };
 

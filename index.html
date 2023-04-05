@@ -30,12 +30,12 @@
                 <fieldset>
                     <!--First Name-->
                     <div class="inputBox">
-                        <input type="text" id="first_name" class="inputs" name="first_name" placeholder="First Name">
+                        <input onkeydown="return /[a-z]/i.test(event.key)" type="text" id="first_name" class="inputs" name="first_name" placeholder="First Name">
                         <p class="error"></p>
                     </div>
                     <!--Last Name-->
                     <div class="inputBox">
-                        <input type="text" id="last_name" class="inputs" name="last_name" placeholder="Last Name">
+                        <input onkeydown="return /[a-z]/i.test(event.key)" type="text" id="last_name" class="inputs" name="last_name" placeholder="Last Name">
                         <p class="error"></p>
                     </div>
                 </fieldset>
@@ -48,7 +48,7 @@
                     </div>
                     <!--Phone Number-->
                     <div class="inputBox">
-                        <input type="tel" id="phone" class="inputs" name="phone" placeholder="06301234321">
+                        <input type="tel" id="phone" class="inputs" name="phone" placeholder="06301234321" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                         <p class="error"></p>
                     </div>
                 </fieldset>
