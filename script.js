@@ -8,14 +8,16 @@ const   submitButton = document.querySelector(".submitButton"),
         errorBoxes = document.querySelectorAll(".error"),
         inputs = document.querySelectorAll(".inputs")
 
-
+/* Test */
 inputs.forEach(input => {
     input.addEventListener("keyup", (e) => {
         console.log("Say My name!");
     } );
 });
 
-
+/* Adding event listeners */
+password.addEventListener("change", validatePassword);
+passwordConfirm.addEventListener("keyup", validatePassword);
 submitButton.addEventListener("click", (e) => {
     var i = 0;
     inputs.forEach(input =>{
@@ -37,6 +39,8 @@ function alphaOnly(event) {
     return ((key >= 65 && key <= 90) || key == 8);
   };
 
+
+/* Validate both passwords */
 function validatePassword(){
     if(password.value != passwordConfirm.value){
         passwordConfirm.setCustomValidity("Passwords doesn't match");
@@ -48,5 +52,3 @@ function validatePassword(){
     }
 }
 
-password.addEventListener("change", validatePassword);
-passwordConfirm.addEventListener("keyup", validatePassword);
