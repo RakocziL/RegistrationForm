@@ -1,6 +1,6 @@
 const   submitButton = document.querySelector(".submitButton"),
         password = document.querySelector("#password"),
-        passwordConfirm =document.querySelector("#passworAgain"),
+        passwordConfirm =document.querySelector("#passwordAgain"),
         first_name = document.querySelector("#first_name"),
         last_name = document.querySelector("#last_name"),
         email = document.querySelector("#user_email"),
@@ -14,13 +14,6 @@ inputs.forEach(input => {
         console.log("Say My name!");
     } );
 });
-
-
-first_name.addEventListener("keypress", (e)=>{
-    var key = e.keyCode;
-    return ((key >= 65 && key <= 90) || key == 8);
-});
-
 
 
 submitButton.addEventListener("click", (e) => {
@@ -44,3 +37,16 @@ function alphaOnly(event) {
     return ((key >= 65 && key <= 90) || key == 8);
   };
 
+function validatePassword(){
+    if(password.value != passwordConfirm.value){
+        passwordConfirm.setCustomValidity("Passwords doesn't match");
+        errorBoxes[5].innerHTML="<sub>*<sub>Passwords doesn't match";
+    }
+    else{
+        passwordConfirm.setCustomValidity("");
+        errorBoxes[5].innerHTML="";
+    }
+}
+
+password.addEventListener("change", validatePassword);
+passwordConfirm.addEventListener("keyup", validatePassword);
